@@ -1,8 +1,8 @@
 <?php
 
-$hostname = "";
-$database = "";
-$username = "";
-$password = "";
+$hostname = "localhost";
+$database = "only";
+$username = "phalcon";
+$password = "1234";
 
 ?>
