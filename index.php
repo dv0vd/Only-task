@@ -1,7 +1,7 @@
 <?php
 
 $title = 'Главная';
-require_once('private/header.php');
+require_once('private/php/header.php');
 
 ?>
 
@@ -11,6 +11,6 @@ require_once('private/header.php');
 
 <?php
 
-require_once('private/footer.php');
+require_once('private/php/footer.php');
 
 ?>
