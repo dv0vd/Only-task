@@ -48,7 +48,10 @@ $connection = $db -> connect();
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$user = new User($name, $email, $password);
+$user = new User();
+$user -> setName($name);
+$user -> setEmail($email);
+$user -> setPassword($password);
 $result = $user -> find($connection, "user_email", $email);
 if(mysqli_num_rows($result) != 0) {
     $response = ['result' => false, 'message' => 'Данный пользователь уже зарегистрирован!'];
