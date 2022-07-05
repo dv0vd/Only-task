@@ -3,3 +3,17 @@ body{
     padding: 0;
     text-align: center;
  }
+
+#signup_form div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+#signup_form div input{
+    width: 80%;
+    margin-bottom: 20px;
+}
