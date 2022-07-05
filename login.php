@@ -1,7 +1,7 @@
 <?php
 
 $title = 'Авторизация';
-require_once('private/php/header.php');
+require_once('private/header.php');
 session_start();
 
 ?>
@@ -36,6 +36,6 @@ if(isset($_SESSION['user_id'])) {
 
 <?php
 
-require_once('private/php/footer.php');
+require_once('private/footer.php');
 
 ?>

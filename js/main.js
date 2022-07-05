@@ -27,7 +27,7 @@ $("#signup_form").submit(function(e){
         password_repeat: $("#signup_password_repeat").val()
     };
     $.ajax({
-        url: 'private/php/signup_request.php',
+        url: '../private/signup_request.php',
         type: "post",
         dataType: 'json',
         data: postData,
@@ -61,7 +61,7 @@ $("#login_form").submit(function(e){
       password: $("#login_password").val(),
   };
   $.ajax({
-      url: 'private/php/login_request.php',
+      url: '../private/login_request.php',
       type: "post",
       dataType: 'json',
       data: postData,
@@ -84,7 +84,7 @@ $("#logout").click(function(e){
   e.preventDefault();
   if(confirm("Действительно выйти?")){
     $.ajax({
-      url: 'private/php/logout_request.php',
+      url: '../private/logout_request.php',
       type: "post",
       dataType: 'json',
       success: function (data) {
