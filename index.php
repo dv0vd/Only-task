@@ -22,6 +22,9 @@ session_start();
 
 <?php
 
+if(isset($_SESSION['user_id'])){
+    echo "<h3><a href='private/php/logout_request.php' id='logout'>Выход</a></h4>";
+}
 require_once('private/php/footer.php');
 
 ?>
