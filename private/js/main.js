@@ -79,3 +79,25 @@ $("#login_form").submit(function(e){
     });
     
 });
+
+$("#logout").click(function(e){
+  e.preventDefault();
+  if(confirm("Действительно выйти?")){
+    $.ajax({
+      url: 'private/php/logout_request.php',
+      type: "post",
+      dataType: 'json',
+      success: function (data) {
+        alert(data.message);
+        if(data.result === true) {
+          window.location = "/";
+        }
+      //   if(data.result) 
+      //     $("#signup_form")[0].reset();
+      },
+      error: function (data) {
+        alert("Произошла неизвестная ошибка");
+      }
+    });
+  }
+});
