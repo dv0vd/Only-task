@@ -56,12 +56,14 @@ $result = $user -> find($connection, "user_email", $email);
 if(mysqli_num_rows($result) != 0) {
     $response = ['result' => false, 'message' => 'Данный пользователь уже зарегистрирован!'];
     echo json_encode($response);
-    return;
-}
-if($user -> save($connection)) {
-    $response = ['result' => true, 'message' => 'Успех!'];
-    echo json_encode($response);
-    return;
+} else {
+    if($user -> save($connection)) {
+        $response = ['result' => true, 'message' => 'Успех!'];
+        echo json_encode($response);
+    } else {
+        $response = ['result' => false, 'message' => 'Возникла непредвиденная ошибка!'];
+        echo json_encode($response);
+    }
 }
 $db -> close($connection);
 
