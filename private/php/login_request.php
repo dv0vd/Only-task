@@ -5,6 +5,8 @@ declare(strict_types = 1);
 require_once('classes/Db.php');
 require_once('classes/User.php');
 
+session_start();
+
 if(isset($_SESSION['user_id'])) {
     $response = ['result' => false, 'message' => 'Вы уже авторизованы!'];
     echo json_encode($response);
@@ -38,7 +40,6 @@ if(mysqli_num_rows($result) == 0) {
 } else {
     while ($obj = $result->fetch_object()) {
         if($password == $obj -> user_password) {
-            session_start();
             $_SESSION['user_id'] = $obj -> user_id;
             $response = ['result' => true, 'message' => 'Успех!'];
             echo json_encode($response);

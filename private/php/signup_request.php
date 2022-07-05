@@ -5,6 +5,8 @@ declare(strict_types = 1);
 require_once('classes/Db.php');
 require_once('classes/User.php');
 
+session_start();
+
 if(isset($_SESSION['user_id'])) {
     $response = ['result' => false, 'message' => 'Вы уже авторизованы!'];
     echo json_encode($response);
