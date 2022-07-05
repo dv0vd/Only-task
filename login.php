@@ -17,7 +17,7 @@ if(isset($_SESSION['user_id'])) {
 ?>
 
 
-<form action="private/login_request.php" method="post" id='login_form'
+<form id='login_form'
     <?php
         if(isset($_SESSION['user_id'])) echo "style='display:none'";
     ?>

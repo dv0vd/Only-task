@@ -16,7 +16,7 @@ if(isset($_SESSION['user_id'])) {
 
 ?>
 
-<form action="private/signup_request.php" method="post" id='signup_form'
+<form id='signup_form'
     <?php
         if(isset($_SESSION['user_id'])) echo "style='display:none'";
     ?>
