@@ -21,3 +21,7 @@ form div input{
 form{
     margin-bottom: 20px;
 }
+
+a, a:visited{
+    color: blue;
+}
