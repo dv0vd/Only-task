@@ -4,7 +4,7 @@ body{
     text-align: center;
  }
 
-#signup_form div{
+form div{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -13,11 +13,11 @@ body{
     width: 80%;
 }
 
-#signup_form div input{
+form div input{
     width: 80%;
     margin-bottom: 20px;
 }
 
-#signup_form{
+form{
     margin-bottom: 20px;
 }
