@@ -32,8 +32,8 @@ if(isset($_SESSION['user_id'])) {
 
     </div>
     <input type="submit" value="Зарегистрироваться">
-
 </form>
+<a href="/">На главную</a>
 
 
 <?php
