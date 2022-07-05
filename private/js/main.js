@@ -45,3 +45,37 @@ $("#signup_form").submit(function(e){
       });
 
 });
+
+$("#login_form").submit(function(e){
+  e.preventDefault();
+  if($("#login_email").val() === ""){
+      alert("Отсутствует email!");
+      return;
+  }
+  if($("#login_password").val() === ""){
+      alert("Отсутствует пароль!");
+      return;
+  }
+  let postData = {
+      email: $("#login_email").val(),
+      password: $("#login_password").val(),
+  };
+  $.ajax({
+      url: 'private/php/login_request.php',
+      type: "post",
+      dataType: 'json',
+      data: postData,
+      success: function (data) {
+        alert(data.message);
+        if(data.result === true) {
+          window.location = "/";
+        }
+      //   if(data.result) 
+      //     $("#signup_form")[0].reset();
+      },
+      error: function (data) {
+        alert("Произошла неизвестная ошибка");
+      }
+    });
+    
+});
