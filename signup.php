@@ -1,6 +1,8 @@
 <?php
 
+$title = 'Регистрация';
 require_once('private/php/header.php');
+session_start();
 
 ?>
 
@@ -10,7 +12,6 @@ require_once('private/php/header.php');
 
 if(isset($_SESSION['user_id'])) {
     echo "<p>Вы уже авторизованы</p>";
-    echo "<a href='/'>На главную</a>";
 }
 
 ?>

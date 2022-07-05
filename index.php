@@ -3,6 +3,8 @@
 $title = 'Главная';
 require_once('private/php/header.php');
 
+session_start();
+
 ?>
 
 <h1>Статус пользователя: 
